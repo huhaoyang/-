@@ -1,0 +1,89 @@
+import App from '@/App'
+import Home from '@/pages/home/home'
+import orderList from '@/pages/orders/list'
+import login from '@/pages/login/index'
+import orderDetail from '@/pages/orders/detail'
+import orderCreate from '@/pages/orders/create'
+import track from '@/pages/orders/track'
+import condition from '@/pages/market/condition'
+import merchants from '@/pages/market/list'
+import merchantDetail from '@/pages/market/detail'
+import cart from '@/pages/carts/list'
+import pay from '@/pages/pay/pay'
+import backList from '@/pages/backs/list'
+
+export default [
+  {
+    path: "/",
+    component: App,
+    children : [
+      {
+        path: '/',
+        redirect: '/home'
+      },
+      {
+        path: '/home',
+        name: 'home',
+        component: Home
+      },
+      {
+        path: '/order',
+        name: 'orderList',
+        component: orderList
+      },
+      {
+        path: '/order/:id',
+        name: 'orderDetail',
+        component: orderDetail
+      },
+      {
+        path: '/login',
+        name: 'login',
+        component: login
+      },
+      {
+        path: '/track/:id',
+        name: 'track',
+        component: track
+      },
+      {
+        path: '/condition',
+        name: 'condition',
+        component: condition
+      },
+      {
+        path: '/merchants',
+        name: 'merchants',
+        component: merchants
+      },
+      {
+        path: '/merchants/:id',
+        name: 'merchantDetail',
+        component: merchantDetail
+      },
+      {
+        path: '/cart',
+        name: 'cart',
+        component: cart
+      },
+      {
+        path: '/orderCreate/:id',
+        name: 'orderCreate',
+        component: orderCreate
+      },
+      {
+        path: '/pay/:id',
+        name: 'pay',
+        component: pay
+      },
+      {
+        path: '/back/:id',
+        name: 'backList',
+        component: backList
+      }
+
+    ]
+  }
+]
+
+

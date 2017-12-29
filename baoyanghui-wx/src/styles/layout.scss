@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+.header.vux-header {
+  background-color: #7058a4;
+  color: #ffffff;
+
+  .vux-header-left {
+    * {
+      color: #ffffff;
+    }
+
+    .left-arrow {
+      &:before {
+        border: 1px solid #fff;
+        border-width: 1px 0 0 1px;
+      }
+    }
+  }
+
+  .vux-header-right {
+    color: #ffffff;
+    right: 25px;
+
+    a {
+      color: #ffffff;
+    }
+
+    .right-arrow {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: -5px;
+      right: -25px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #fff;
+        border-width: 1px 0 0 1px;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        top: 8px;
+        left: 7px;
+      }
+    }
+  }
+}
+.gallery {
+  .vux-number-input {
+    color: #9d9d9d;
+    background-color: #f3f3f3;
+  }
+}
+
+
