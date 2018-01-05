@@ -5,6 +5,9 @@
 .header.vux-header {
   background-color: #7058a4;
   color: #ffffff;
+  //position: fixed;
+  //z-index: 1000;
+  //width: 100%;
 
   .vux-header-left {
     * {
@@ -49,11 +52,16 @@
     }
   }
 }
+
+
+//huhy新增
 .gallery {
   .vux-number-input {
     color: #9d9d9d;
     background-color: #f3f3f3;
   }
 }
+
+
 
 

@@ -19,9 +19,9 @@ let accessArr = [
 if (process.env.NODE_ENV == 'development') {
   baseUrl= '/apis/';
 }else if(process.env.NODE_ENV == 'production'){
-  // baseUrl= 'http://baoyanghui.com/Car_2_0/';
+  baseUrl= 'http://baoyanghui.com/Car_2_0/';
   // baseUrl= 'http://192.168.41.67:7080/Car/';
-  baseUrl= 'http://www.vic-info.com:7080/Car/';
+  // baseUrl= 'http://www.vic-info.com:7080/Car/';
 }
 
 export {

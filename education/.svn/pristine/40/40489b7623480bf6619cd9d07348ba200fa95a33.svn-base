@@ -1,0 +1,53 @@
+.table {
+  display: inline-block;
+  width:100%;
+  float: right;
+}
+
+.tableHead {
+  margin-bottom: 20px;
+}
+
+.FormArea {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+  float: right;
+}
+
+.title {
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.btnArea {
+  width:100%;
+  height: 60px;
+  line-height: 60px;
+  background: #DFE9F6;
+}
+
+.btn {
+  margin: 10px;
+}
+
+.pagination {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+  a {
+    background-color: #DFE9F6 !important;
+  }
+  a:after {
+    font-size: 22px !important;
+  }
+}
+
+.coverUrl {
+  width: 100px;
+  height: auto;
+}
+
+.tableBody {  }

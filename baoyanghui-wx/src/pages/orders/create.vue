@@ -366,7 +366,7 @@
       balancePay(){
       	let pointsCash = (this.usePoint===0)? 0:this.pointsCash;
         let total = this.totalPrice+this.expressFee.expressFee-pointsCash;
-        return (this.storeBalance>total) ? total : this.storeBalance ;
+        return (this.storeBalance>total) ? total: this.storeBalance;
       },
       pay(){
         let pointsCash = (this.usePoint===0)? 0:this.pointsCash;
@@ -385,16 +385,13 @@
       },
       pointsPay(){
         let points = (this.totalPrice*this.configs.max_point_pay)/this.configs.exchange_point_to_cash;
-        let a;
         if(this.totalPrice<parseInt(this.configs.min_price_for_point)){
-          a=0;
+          return 0;
         }else if(this.points.pointAvailable>Math.round(points)){
-          a=Math.floor(points);
+          return Math.floor(points);
         }else{
-          a=Math.floor(this.points.pointAvailable);
+          return Math.floor(this.points.pointAvailable);
         }
-        this.usePoint = a;
-        return a;
       }
     }
   }

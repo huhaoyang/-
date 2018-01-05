@@ -18,6 +18,10 @@
           <x-number title="购买" v-model="form.amount" :min="detail.quantityMin" :fillable="true"></x-number>
         </group>
       </div>
+      <div class="block B2B">
+        <p class="title">适配车型</p>
+        <p class="name">{{detail.note}}</p>
+      </div>
       <div class="block B2B" v-if="detail.merchantId===0">
         <p class="title">销售商家信息</p>
         <p class="name">{{detail.B2BNameCN}}</p>
@@ -28,10 +32,7 @@
         <p class="name">{{detail.placeName}}</p>
         <p class="introduce">商家简介</p>
       </div>
-      <div class="block B2B">
-        <p class="title">产地和包装</p>
-        <p class="name">{{detail.note}}</p>
-      </div>
+
       <div class="block">
         <p class="title">宝贝参数</p>
         <span v-if="detail.partLevelId===0" class="level">{{detail.levelNote}}</span>
@@ -112,6 +113,7 @@
         let res = await getConfigs();
         if(res.code === 0){
           this.configs = res.resultData;
+          console.log(res.resultData)
         }else{
           this.error.code = true;
           this.error.message = res.message;

@@ -77,7 +77,7 @@
     		return this.keyParameterJson;
       },
       model(){
-      	return this.displayModel;//(this.displayModel.length<=35) ? this.displayModel : this.displayModel.slice(0,35)+"...";
+      	return (this.displayModel.length<=35) ? this.displayModel : this.displayModel.slice(0,25)+"...";
       },
       sPrice(){
         return (this.price*(1-this.rate)).toFixed(2);
@@ -175,7 +175,7 @@
     .logo {
       font-size: 0.75rem;
       line-height: 1.2rem;
-      color: #cccccc;
+      color: #707070;
       img {
         height:1.2rem;
         vertical-align: middle;

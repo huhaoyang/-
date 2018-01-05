@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container hu_home">
     <img class="banner" src="~@/images/banner.png">
     <div class="top-bar">
       <div class="area" @click="provinceShow=true">
@@ -48,7 +48,7 @@
           <span>共有{{cart.pointBalance}}积分</span>
         </p>
         <p>
-          <span>已抵扣 ￥{{cart.pointDeduction}}</span>
+          <span class="excepted">已抵扣 ￥{{cart.pointDeduction}}</span>
           <span>本单可抵扣 {{cart.pointMax}}积分</span>
         </p>
       </div>
@@ -349,6 +349,9 @@
         ._v-container {
           height:90vh !important;
           position: absolute;
+          .list{
+            margin-bottom: 10vh;
+          }
         }
       }
     }
@@ -389,6 +392,7 @@
         font-size: 0.7rem;
         line-height: 4vh;
         color: #c8c7cc;
+        background-color: #f7f7f7;
 
         p {
           display: flex;
@@ -396,9 +400,11 @@
           justify-content: space-between;
           flex-flow: wrap;
           span {
-
+            color:#707070;
           }
-
+          .excepted{
+            color: #9d9d9d;
+          }
           .price {
             font-size: 1rem;
             color: #eb0c0c;
@@ -411,7 +417,7 @@
         color: #ffffff;
         width: 30%;
         padding: 0 1rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
         line-height: 8vh;
         text-align: center;
 
@@ -420,6 +426,7 @@
         }
       }
     }
+
   }
 </style>
 
@@ -440,7 +447,35 @@
     background: #f4f4f4;
   }
 
-  .vux-x-icon {
+  .right.vux-x-icon {
     fill: #7058a4;
+  }
+  /*huhy新增*/
+  .content .right .vux-number-round .vux-number-selector-plus{
+    width: 16px;
+    height: 16px;
+    border: none;
+    padding: 2px;
+    background-color: #eb0c0c;
+
+  }
+  .content .right .vux-number-round .vux-number-selector-sub{
+    width: 16px;
+    height: 16px;
+    border: none;
+    padding: 2px;
+    background-color: #eb0c0c;
+
+  }
+  .content .right .vux-number-selector svg{
+    width: 16px;
+    height: 16px;
+    fill:#ffffff;
+    position: relative;
+    top:-1px;
+
+  }
+  .hu_home ._v-container>._v-content>.loading-layer{
+    top: -10vh;
   }
 </style>

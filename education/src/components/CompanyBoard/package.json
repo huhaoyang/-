@@ -1,0 +1,6 @@
+{
+  "name": "CompanyBoard",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CompanyBoard.js"
+}
